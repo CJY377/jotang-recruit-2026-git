@@ -1,0 +1,195 @@
+{
+  "baseline": {
+    "test_acc": 0.975,
+    "params": 162,
+    "ckpt": "c:\\Users\\Lenovo\\Desktop\\Jotang-ml-task1\\output\\mlp_baseline.pt"
+  },
+  "ablation_width": [
+    {
+      "name": "窄: h=4",
+      "params": 22,
+      "best_val_acc": 0.91,
+      "test_acc": 0.8675,
+      "best_epoch": 137,
+      "ms_per_epoch": 19.7
+    },
+    {
+      "name": "基线: h=32",
+      "params": 162,
+      "best_val_acc": 0.97,
+      "test_acc": 0.975,
+      "best_epoch": 35,
+      "ms_per_epoch": 23.7
+    },
+    {
+      "name": "宽: h=128",
+      "params": 642,
+      "best_val_acc": 0.97,
+      "test_acc": 0.9725,
+      "best_epoch": 20,
+      "ms_per_epoch": 108.1
+    },
+    {
+      "name": "宽: h=512",
+      "params": 2562,
+      "best_val_acc": 0.97,
+      "test_acc": 0.9725,
+      "best_epoch": 18,
+      "ms_per_epoch": 115.8
+    }
+  ],
+  "ablation_activation": [
+    {
+      "name": "ReLU",
+      "params": 162,
+      "best_val_acc": 0.97,
+      "test_acc": 0.975,
+      "best_epoch": 35,
+      "ms_per_epoch": 44.9
+    },
+    {
+      "name": "Tanh",
+      "params": 162,
+      "best_val_acc": 0.965,
+      "test_acc": 0.9725,
+      "best_epoch": 27,
+      "ms_per_epoch": 19.0
+    },
+    {
+      "name": "Sigmoid",
+      "params": 162,
+      "best_val_acc": 0.965,
+      "test_acc": 0.9675,
+      "best_epoch": 83,
+      "ms_per_epoch": 65.0
+    }
+  ],
+  "ablation_lr": [
+    {
+      "name": "lr=1.0(过大)",
+      "params": 162,
+      "best_val_acc": 0.97,
+      "test_acc": 0.9575,
+      "best_epoch": 12,
+      "ms_per_epoch": 103.9
+    },
+    {
+      "name": "lr=0.1",
+      "params": 162,
+      "best_val_acc": 0.97,
+      "test_acc": 0.975,
+      "best_epoch": 120,
+      "ms_per_epoch": 115.4
+    },
+    {
+      "name": "lr=0.01",
+      "params": 162,
+      "best_val_acc": 0.9625,
+      "test_acc": 0.965,
+      "best_epoch": 131,
+      "ms_per_epoch": 120.2
+    },
+    {
+      "name": "lr=0.0001(过小)",
+      "params": 162,
+      "best_val_acc": 0.8825,
+      "test_acc": 0.8575,
+      "best_epoch": 183,
+      "ms_per_epoch": 37.0
+    }
+  ],
+  "errors": [
+    {
+      "idx": 21,
+      "x1": 0.751,
+      "x2": 0.049,
+      "true": 1,
+      "pred": 0,
+      "p0": 0.592,
+      "p1": 0.408
+    },
+    {
+      "idx": 34,
+      "x1": 0.592,
+      "x2": 0.061,
+      "true": 0,
+      "pred": 1,
+      "p0": 0.157,
+      "p1": 0.843
+    },
+    {
+      "idx": 146,
+      "x1": -0.053,
+      "x2": 0.562,
+      "true": 0,
+      "pred": 1,
+      "p0": 0.101,
+      "p1": 0.899
+    },
+    {
+      "idx": 160,
+      "x1": 1.212,
+      "x2": 0.004,
+      "true": 1,
+      "pred": 0,
+      "p0": 0.792,
+      "p1": 0.208
+    },
+    {
+      "idx": 174,
+      "x1": -0.19,
+      "x2": 0.834,
+      "true": 1,
+      "pred": 0,
+      "p0": 0.981,
+      "p1": 0.019
+    },
+    {
+      "idx": 226,
+      "x1": 1.323,
+      "x2": -0.138,
+      "true": 0,
+      "pred": 1,
+      "p0": 0.074,
+      "p1": 0.926
+    },
+    {
+      "idx": 228,
+      "x1": 0.033,
+      "x2": 0.828,
+      "true": 1,
+      "pred": 0,
+      "p0": 0.94,
+      "p1": 0.06
+    },
+    {
+      "idx": 272,
+      "x1": 0.545,
+      "x2": 0.156,
+      "true": 0,
+      "pred": 1,
+      "p0": 0.242,
+      "p1": 0.758
+    }
+  ],
+  "imbalanced": {
+    "acc": 0.981,
+    "recall_minor": 0.8,
+    "cm": [
+      [
+        8,
+        2
+      ],
+      [
+        2,
+        198
+      ]
+    ]
+  },
+  "overfit": {
+    "train_acc": 1.0,
+    "val_acc_final": 0.9425,
+    "test_acc": 0.9325,
+    "val_loss_final": 0.6863
+  }
+}
